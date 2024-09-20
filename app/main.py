@@ -11,4 +11,11 @@ app.include_router(user.router)
 app.include_router(movie.router)
 app.include_router(comment.router)
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv() 
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+SECRET_KEY = os.getenv("SECRET_KEY")
 
