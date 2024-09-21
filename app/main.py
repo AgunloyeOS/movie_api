@@ -1,11 +1,7 @@
 from fastapi import FastAPI
-from database import engine
-from models import Base
-from routers import user, movie, comment
-
-#from app.database import engine
-#from app.models import Base
-#from app.routers import user, movie, comment
+from app.database import engine
+from app.models import Base
+from app.routers import user, movie, comment
 
 Base.metadata.create_all(bind=engine)
 
